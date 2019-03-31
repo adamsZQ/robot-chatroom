@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
 
+from mysite import test_app
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^search-post$', test_app.search_post),
     url(r'chat/', include('chat.urls')),
 ]
